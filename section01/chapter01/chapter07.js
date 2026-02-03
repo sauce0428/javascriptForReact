@@ -60,3 +60,26 @@ console.log(compareA);  //true
 //8.자바스트립트 동적타입기능 
 //: 타입의 유연성을제공하지만 에러를 발생할수 있는 기능임 
 let compareA = 1; //현재는 정수형타입 
+compareA = “1”;  //정수형타입으로 선언된 변수에 문자열값을 넣어도 이상없음(동적타입기능) 
+ 
+//9.typeof 연산자 
+// 값의 타입을 문자열로 반환하는 기능을 하는 연산자 
+let compareA = 1; 
+console.log(typeof compareA); //number 
+compareA = “1”; 
+console.log(typeof compareA); //string 
+ 
+//10. ?? (null 병합 연산자) 
+//병합 연산자라고 하는데, 앞의 피연산자가 null 혹은 undefined라면 뒤 피연산자를 반환하고, 그렇지 
+//않다면 앞의 피연산자를 반환한다. 즉 null, undefined 가 아닌 값을 찾아내는 연산자 
+ 
+let a;  //undefined가 저장되어 있음. 
+a = a ?? 10; //연산자(??)는 피연사자중에 null 이나 undefined 이 아닌값을 선택한다.   
+console.log(a);  //10 
+ 
+a =30;   
+a = a ?? 10; //연산자(??)는 피연사자중에 null 이나 undefined 이 아닌값을 선택한다.   
+console.log(a);  //30 
+ 
+let a = null; 
+let x = a ?? b; // x = b
