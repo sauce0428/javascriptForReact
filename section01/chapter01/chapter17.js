@@ -21,3 +21,11 @@ console.log(item1, item2);
   
 arrC[0] = "hello"; 
 console.log(arrC);
+
+
+let array2 = new Array();
+array2.push("도훈");
+console.log(array2);
+
+arrC.push(10);
+console.log(arrC);
