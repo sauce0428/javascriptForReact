@@ -1,0 +1,13 @@
+.login{
+  background-color: aqua;
+  font-weight: 700;
+  color: red;
+  border-bottom: 2px solid black;
+}
+
+.logout{
+  background-color: aqua;
+  font-weight: 700;
+  color: blue;
+  border-bottom: 2px solid black;
+}
