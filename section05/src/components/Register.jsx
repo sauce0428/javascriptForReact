@@ -30,6 +30,7 @@ const Register = () =>{
     <div>
       <label htmlFor="national">국적</label>
       <select value={input.national} name="national" id="national" onChange={onChange} >
+        <option value="cn">중국</option>
         <option value="kr">한국</option>
         <option value="us">미국</option>
         <option value="jp">일본</option>
