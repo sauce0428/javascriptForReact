@@ -56,7 +56,7 @@ function App() {
     <div className="App">
     <Header />
     <Editor onCreate={onCreate} />
-    <List todos={todos} onUpdate={onUpdate} />
+    <List todos={todos} onUpdate={onUpdate} onDelete={onDelete} />
     </div>
     </>
   )
