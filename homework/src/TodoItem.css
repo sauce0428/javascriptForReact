@@ -1,0 +1,79 @@
+.TodoItem {
+  display: flex;
+  align-items: center;
+  padding: 15px 18px;
+  background-color: #f9fafb;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.TodoItem:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.TodoItem .content {
+  flex: 1;
+  font-size: 15px;
+}
+
+.TodoItem .content input {
+  width: 100%;
+  padding: 6px 10px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+.TodoItem .date {
+  font-size: 12px;
+  color: #888;
+  margin-right: 12px;
+}
+
+.TodoItem .actions button {
+  margin-left: 6px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.TodoItem .actions .edit-btn {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.TodoItem .actions .edit-btn:hover {
+  background-color: #2563eb;
+}
+
+.TodoItem .actions .delete-btn {
+  background-color: #ef4444;
+  color: white;
+}
+
+.TodoItem .actions .delete-btn:hover {
+  background-color: #dc2626;
+}
+
+.TodoItem .actions .save-btn {
+  background-color: #22c55e;
+  color: white;
+}
+
+.TodoItem .actions .save-btn:hover {
+  background-color: #16a34a;
+}
+
+.TodoItem .actions .cancel-btn {
+  background-color: #fbbf24;
+  color: white;
+}
+
+.TodoItem .actions .cancel-btn:hover {
+  background-color: #f59e0b;
+}
