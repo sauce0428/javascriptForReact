@@ -1,4 +1,5 @@
 import '../css/TodoItem.css'
+import { memo } from 'react';
 
 const TodoItem = ({id, isDone, content, date, onUpdate, onDelete}) => { 
   const onChangeIsDone = (e)=>{
@@ -17,4 +18,4 @@ const TodoItem = ({id, isDone, content, date, onUpdate, onDelete}) => {
     </div> 
   </> 
 }; 
-export default TodoItem;
+export default memo(TodoItem)
