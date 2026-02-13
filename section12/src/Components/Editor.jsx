@@ -1,7 +1,7 @@
 import Button from "./Button";
 import EmotionItem from "./EmotionItem";
 import './Editor.css'
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 const emotionList = [ 
@@ -41,16 +41,20 @@ const getStringDate = (targetDate)=>{
 
 }
 
-const Editor = ({onSubmit})=>{
+const Editor = ({onSubmit, initData})=>{
   const nav = useNavigate()
-  const [createdDate, setCreatedDate] = useState(new Date())
-  const [emotionId, setEmotionId] = useState(5)
-  const [content, setContent] = useState("")
-  const [input, setInput] = useState({
+  const [createdDate, setCreatedDate] = useState(initData ? new Date(initData.createdDate): new Date())
+  const [emotionId, setEmotionId] = useState(initData ? initData.emotionId: 5)
+  const [content, setContent] = useState(initData ? initData.content : "")
+// useEffect 없이 바로 초기값으로 할당
+  const [input, setInput] = useState(initData ? {
+    ...initData,
+    createdDate: new Date(initData.createdDate)
+  } : {
     createdDate: new Date(),
-    emotionId: 5,
-    content: "",
-  })
+    emotionId: 3,
+    content: ""
+  });
 
   const onChangeDate = (e)=>{
     setCreatedDate(new Date(e.target.value))
