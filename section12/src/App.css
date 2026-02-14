@@ -1,0 +1,165 @@
+/* ===== 기본 세팅 ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #f5f7fa, #e4ecf7);
+  font-family: "Pretendard", "Noto Sans KR", sans-serif;
+  color: #333;
+}
+
+/* ===== 전체 레이아웃 ===== */
+#root {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* ===== 공통 버튼 ===== */
+button {
+  border: none;
+  padding: 10px 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+button.primary {
+  background-color: #4a90e2;
+  color: white;
+}
+
+button.negative {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+button.gray {
+  background-color: #e0e0e0;
+}
+
+/* ===== 입력창 ===== */
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.15);
+}
+
+/* ===== 카드 스타일 (일기 리스트) ===== */
+.diary-item {
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 16px;
+  background: #fafafa;
+  transition: 0.2s;
+  border: 1px solid #f0f0f0;
+}
+
+.diary-item:hover {
+  background: #f4f8ff;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.diary-item .date {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 6px;
+}
+
+.diary-item .content {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* ===== 헤더 영역 ===== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.header h2 {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* ===== 감정 선택 버튼 ===== */
+.emotion-list {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.emotion-item {
+  flex: 1;
+  padding: 12px;
+  border-radius: 14px;
+  text-align: center;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: 0.2s;
+  background-color: #f3f6fb;
+}
+
+.emotion-item:hover {
+  background-color: #e8f0fe;
+}
+
+.emotion-item.selected {
+  border-color: #4a90e2;
+  background-color: #dbe9ff;
+}
+
+/* ===== 상세 페이지 ===== */
+.diary-detail {
+  padding: 25px;
+  background: #f9fbff;
+  border-radius: 16px;
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+/* ===== 페이지 전환 부드럽게 ===== */
+.page {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
