@@ -2,7 +2,6 @@ const Footer = ()=>{
 
   return <>
     <div>
-      <hr />
     </div>
   </>
 }
